@@ -14,10 +14,10 @@
 		7726ACDB1AB4999A00D299A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7726ACDA1AB4999A00D299A3 /* Images.xcassets */; };
 		7726ACDE1AB4999A00D299A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7726ACDC1AB4999A00D299A3 /* LaunchScreen.xib */; };
 		7726ACEA1AB4999A00D299A3 /* smalltestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7726ACE91AB4999A00D299A3 /* smalltestTests.m */; };
+		77CE8C7A1AB5C00000F80C6D /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8C791AB5C00000F80C6D /* style.css */; };
 		77CF749D1AB5823800DFA92B /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CF74981AB5823800DFA92B /* HTMLNode.m */; };
 		77CF749E1AB5823800DFA92B /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CF749B1AB5823800DFA92B /* HTMLParser.m */; };
 		77CF749F1AB5823800DFA92B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 77CF749C1AB5823800DFA92B /* README.md */; };
-		77CF74A11AB5840D00DFA92B /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CF74A01AB5840D00DFA92B /* libxml2.2.dylib */; };
 		77CF74A31AB5846800DFA92B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CF74A21AB5846800DFA92B /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,7 @@
 		7726ACE31AB4999A00D299A3 /* smalltestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smalltestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7726ACE81AB4999A00D299A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7726ACE91AB4999A00D299A3 /* smalltestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smalltestTests.m; sourceTree = "<group>"; };
+		77CE8C791AB5C00000F80C6D /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		77CF74971AB5823800DFA92B /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
 		77CF74981AB5823800DFA92B /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
 		77CF749A1AB5823800DFA92B /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CF74A31AB5846800DFA92B /* libxml2.dylib in Frameworks */,
-				77CF74A11AB5840D00DFA92B /* libxml2.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +113,7 @@
 		7726ACCD1AB4999A00D299A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77CE8C791AB5C00000F80C6D /* style.css */,
 				7726ACCE1AB4999A00D299A3 /* Info.plist */,
 				7726ACCF1AB4999A00D299A3 /* main.m */,
 			);
@@ -229,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7726ACD91AB4999A00D299A3 /* Main.storyboard in Resources */,
+				77CE8C7A1AB5C00000F80C6D /* style.css in Resources */,
 				7726ACDE1AB4999A00D299A3 /* LaunchScreen.xib in Resources */,
 				7726ACDB1AB4999A00D299A3 /* Images.xcassets in Resources */,
 			);

@@ -22,10 +22,9 @@
     NSURL *url = [NSURL URLWithString:@"http://chensihang.com/blog/?json=1"];
     NSString *str = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
-    [self.view addSubview:label];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     NSArray *arr = [json objectForKey:@"posts"];
+    NSLog(@"123");
     NSMutableArray *posts = [[NSMutableArray alloc] init];
     NSMutableArray *thumbnails = [[NSMutableArray alloc] init];
     for (NSDictionary *contentdata in arr) {
@@ -43,17 +42,18 @@
     
     
     
-    for (NSString *str in posts) {
-        HTMLParser *parser = [[HTMLParser alloc] initWithString:str error:nil];
-        HTMLNode *node = [parser body];
-        HTMLNode *code = [node findChildTag:@"pre"];
-        HTMLNode *para = [node findChildTag:@"p"];
-        HTMLNode *link = [node findChildTag:@"a"];
-        NSLog(@"%@", [code allContents]);
-    }
+//    for (NSString *str in posts) {
+//        HTMLParser *parser = [[HTMLParser alloc] initWithString:str error:nil];
+//        HTMLNode *node = [parser body];
+//        HTMLNode *code = [node findChildTag:@"pre"];
+//        HTMLNode *para = [node findChildTag:@"p"];
+//        HTMLNode *link = [node findChildTag:@"a"];
+//        NSLog(@"%@", [code allContents]);
+//    }
     NSLog(@"%lu", [posts count]);
-    [webview loadHTMLString:posts[0] baseURL:[NSURL URLWithString:@"http://www.chensihang.com/blog"]];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
+    [webview loadHTMLString:posts[0] baseURL:baseURL];
+//    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
