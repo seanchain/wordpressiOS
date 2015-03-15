@@ -42,14 +42,15 @@
     
     
     
-//    for (NSString *str in posts) {
-//        HTMLParser *parser = [[HTMLParser alloc] initWithString:str error:nil];
-//        HTMLNode *node = [parser body];
-//        HTMLNode *code = [node findChildTag:@"pre"];
-//        HTMLNode *para = [node findChildTag:@"p"];
-//        HTMLNode *link = [node findChildTag:@"a"];
-//        NSLog(@"%@", [code allContents]);
-//    }
+    for (NSString *str in posts)
+    {
+        HTMLParser *parser = [[HTMLParser alloc] initWithString:str error:nil];
+        HTMLNode *node = [parser body];
+        HTMLNode *code = [node findChildTag:@"pre"];
+        HTMLNode *para = [node findChildTag:@"p"];
+        HTMLNode *link = [node findChildTag:@"a"];
+        NSLog(@"%@", [code allContents]);
+    }
     NSLog(@"%lu", [posts count]);
     NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
     [webview loadHTMLString:posts[0] baseURL:baseURL];
